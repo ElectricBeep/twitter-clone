@@ -1,0 +1,101 @@
+.moment {
+  display: flex;
+}
+
+.momentMomentContainer {
+  width: 380px;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+}
+
+.momentSingle {
+  cursor: pointer;
+}
+
+.momentSingle:hover {
+  background-color: #efefef;
+}
+
+.momentMomentTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.momentMomentTopLeftTitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.momentMomentTopLeftType {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #f91880;
+}
+
+.momentMomentTopLeftDate {
+  margin-top: 3px;
+  font-size: 13px;
+  color: rgb(100, 100, 100);
+}
+
+.momentMomentTopRight {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f6f6;
+}
+
+.momentMomentBottomIconContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px;
+}
+
+.momentMomentBottomIcon {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.momentMomentBottomIcon:hover {
+  background-color: #9fcfed9b;
+}
+
+.momentFeed {
+  flex: 3.5;
+}
+
+.momentRightbar {
+  flex: 6;
+  position: relative;
+}
+
+.momentRightbarContainer {
+  width: 80%;
+  padding: 30% 0;
+  text-align: center;
+  border-right: 1px solid lightgray;
+}
+
+.momentRightbarImg {
+  width: 60%;
+}
+
+.momentRightbarTitle {
+  margin-top: 30px;
+}
+
+.momentRightbarText {
+  margin-top: 8px;
+  font-size: 15px;
+  color: rgb(100, 100, 100);
+}

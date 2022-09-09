@@ -1,0 +1,150 @@
+.users {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 99vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.usersFlex {
+  flex: 7;
+}
+
+.usersWrapper {
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  height: fit-content;
+  height: 85vh;
+  width: 600px;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  overflow-x: auto;
+}
+
+.usersNavbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 15px;
+}
+
+.usersCloseIcon {
+  font-size: 20px;
+  margin-left: 8px;
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.usersCloseIcon:hover {
+  background-color: #efefef;
+}
+
+.usersUserTags {
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.usersFollowersFollowingContainer {
+  margin-top: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid lightgray;
+}
+
+.usersFollowersFollowing {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+
+.usersFollowersFollowing:hover {
+  background-color: #efefef;
+}
+
+.usersFollowersFollowing.active > span {
+  padding: 10px;
+  border-bottom: 5px solid #1da1f2;
+}
+
+.usersFollowing {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+}
+
+.usersNoUsers {
+  margin-left: 15px;
+  color: rgb(100, 100, 100);
+}
+
+.usersNoUsersContainer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.usersNoUsersImg {
+  width: 70%;
+}
+
+.usersNoUsersText {
+  color: rgb(100, 100, 100);
+  width: 70%;
+  margin-top: 15px;
+}
+
+.usersItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.usersItemLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.usersImg {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.usersName {
+  cursor: pointer;
+}
+
+.usersName:hover {
+  text-decoration: underline;
+}
+
+.usersDesc {
+  margin-top: 5px;
+}
+
+.usersTags {
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}

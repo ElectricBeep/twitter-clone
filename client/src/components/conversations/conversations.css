@@ -1,0 +1,119 @@
+.conversations {
+  flex: 3.5;
+  border-right: 1px solid lightgray;
+}
+
+.conversationsSearch {
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.conversationsSearchContainer {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  padding: 10px 15px;
+  border-radius: 40px;
+}
+
+.conversationsSearchIcon {
+  font-size: 18px;
+  color: rgb(100, 100, 100);
+}
+
+.conversationsInput {
+  border: none;
+  width: 100%;
+}
+
+.conversationsInput:focus {
+  outline: none;
+}
+
+.conversationsItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px;
+  cursor: pointer;
+}
+
+.conversationsItem:hover {
+  background-color: #efefef;
+}
+
+.conversationsProfileImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.conversationsUserProfile {
+  display: flex;
+  gap: 5px;
+}
+
+.conversationsUserName {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.conversationsUserTags,
+.conversationsLastMessage,
+.conversationsDate,
+.conversationsMoreIconContainer {
+  color: rgb(100, 100, 100);
+}
+
+.conversationsItem .conversationsMoreIconContainer {
+  display: none;
+}
+
+.conversationsItem:hover .conversationsMoreIconContainer {
+  display: block;
+}
+
+.conversationsMoreIcon {
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.conversationsMoreIcon:hover {
+  background-color: #9fcfed9b;
+}
+
+.conversationsOpenMoreContainer {
+  position: absolute;
+  top: 0;
+  left: 170px;
+  border-radius: 5px;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+}
+
+.conversationsOpenMoreItem {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.conversationsDelete {
+  color: red;
+}
+
+.conversationsOpenMoreItem:hover {
+  background-color: #efefef;
+}
+
+.conversationsOpenMoreIcon {
+  font-size: 25px;
+}

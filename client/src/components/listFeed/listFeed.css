@@ -1,0 +1,263 @@
+.listFeed {
+  flex: 6.5;
+}
+
+.listFeedNavbar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.listFeedNavbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.listFeedNavbarIcon {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.listFeedNavbarIcon:hover {
+  background-color: #efefef;
+}
+
+.listFeedNavbarTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.listFeedNavbarUserTweetsCount {
+  font-size: 13px;
+  color: rgb(100, 100, 100);
+}
+
+.listFeedNavbarRight {
+  display: flex;
+  gap: 15px;
+}
+
+.listFeedPinnedListsContainer {
+  padding: 20px 15px 40px 15px;
+  border-bottom: 1px solid lightgray;
+}
+
+.listFeedPinnedListsText {
+  margin-top: 40px;
+  margin-left: 15px;
+  color: rgb(100, 100, 100);
+}
+
+.listFeedDiscoverListsContainer {
+  border-bottom: 1px solid lightgray;
+}
+
+.listFeedDiscoverListsTitle {
+  padding: 20px 15px;
+}
+
+.listFeedDiscoverListsItemContainer {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.listFeedDiscoverListsItemContainer:hover,
+.listFeedOpenNewListNavbarCloseIcon:hover {
+  background-color: #efefef;
+}
+
+.listFeedDiscoverListsItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.listFeedDiscoverListsItemImg {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.listFeedDiscoverListsItemTtile {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.listFeedDiscoverListsUserInfo {
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.listFeedDiscoverListsItemUserProfileImg {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.listFeedDiscoverListsItemUserName {
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.listFeedDiscoverListsItemUserName:hover {
+  text-decoration: underline;
+}
+
+.listFeedDiscoverListsItemUserTags {
+  font-size: 13px;
+  color: rgb(100, 100, 100);
+}
+
+.listFeedDiscoverListsItemPinIcon {
+  color: #1da1f2;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.listFeedDiscoverListsItemPinIcon:hover {
+  background-color: #9fcfed9b;
+}
+
+.listFeedOpenNewListContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #393939a2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.listFeedOpenNewListWrapper {
+  height: 85vh;
+  width: 80vw;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+}
+
+.listFeedOpenNewListNavbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.listFeedOpenNewListNavbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.listFeedOpenNewListNavbarCloseIcon {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.listFeedNewListNextButton {
+  border: none;
+  color: white;
+  background-color: rgb(100, 100, 100);
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.listFeedOpenNewListImgContainer {
+  position: relative;
+  margin: 0 5px;
+  width: calc(100% - 10px);
+  height: 30vh;
+  background-color: #a8a7a7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listFeedOpenNewListImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.listFeedOpenNewListAddImgIcon {
+  position: absolute;
+  font-size: 25px;
+  padding: 8px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(60, 60, 60);
+  cursor: pointer;
+}
+
+.listFeedOpenNewListAddImgIcon:hover {
+  background-color: rgb(75, 75, 75);
+}
+
+.listFeedOpenNewListInputs {
+  padding: 15px 20px;
+}
+
+.listFeedOpenNewListNameInput {
+  width: calc(100% - 20px);
+  height: 35px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.listFeedOpenNewListTextarea {
+  margin-top: 25px;
+  width: calc(100% - 20px);
+  height: 70px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.listFeedOpenNewListNameInput:focus,
+.listFeedOpenNewListTextarea:focus {
+  outline-color: #1da1f2;
+}
+
+.listFeedOpenNewListInputsCheckbox {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listFeedOpenNewListCheckboxText {
+  margin-top: 5px;
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.listFeedOpenNewListCheckbox {
+  height: 20px;
+  width: 20px;
+}

@@ -1,0 +1,89 @@
+.singlePostPost {
+  flex: 7;
+}
+
+.singlePostBack {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px 0 10px 7px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+}
+
+.singlePostBackIcon {
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.singlePostBackIcon:hover {
+  background-color: #e1e8ed;
+}
+
+.singlePostWriteComment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 15px;
+  border-bottom: 1px solid lightgray;
+}
+
+.singlePostWriteCommentLeft {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.singlePostProfileImg {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.singlePostProfileImg:hover {
+  filter: brightness(0.8);
+}
+
+.singlePostInput {
+  margin-left: 5px;
+  height: 30px;
+  width: 200%;
+  border: none;
+  font-size: 20px;
+}
+
+.singlePostInput:focus {
+  outline: none;
+}
+
+.singlePostButton {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.singlePostButton:hover {
+  background-color: #1a8ad0;
+}
+
+.singlePostButton:disabled {
+  pointer-events: none;
+  background-color: #1da0f27e;
+}
+
+.singlePostHr {
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+}

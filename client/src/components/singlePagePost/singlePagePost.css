@@ -1,0 +1,57 @@
+.singlePagePost {
+  border-bottom: 1px solid #e1e8ed;
+  position: relative;
+}
+
+.singlePagePostWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.singlePagePostDesc {
+  margin-bottom: 15px;
+}
+
+.singlePagePostRetweetsLikesContainer {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.singlePagePostRetweetsLikes {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgb(100, 100, 100);
+  font-size: 15px;
+}
+
+.singlePagePostShares {
+  width: 90px;
+  cursor: pointer;
+}
+
+.singlePagePostShares:hover,
+.singlePagePostLikes:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+.singlePagePostLikes {
+  width: 90px;
+  cursor: pointer;
+}
+
+.singlePagePostCount {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.singlePagePostContent {
+  font-size: 20px;
+  padding: 10px 15px 0 10px;
+}

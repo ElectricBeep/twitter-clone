@@ -1,0 +1,230 @@
+.share {
+  flex: 7;
+}
+
+.shareWrapper {
+  padding: 15px 15px 7px 15px;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.shareTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shareProfileImg {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.shareInput {
+  height: 30px;
+  font-size: 18px;
+  width: 100%;
+  border: none;
+}
+
+.shareInput:focus {
+  outline: none;
+}
+
+.shareImagesContainer {
+  position: relative;
+}
+
+.shareImage {
+  width: 100%;
+  height: 50vh;
+  object-fit: contain;
+}
+
+.shareRemoveImgButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  padding: 7px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+}
+
+.shareRemoveImgButton:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.shareVideoPreviewContainer {
+  position: relative;
+}
+
+.shareVideoPreview {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.shareActive {
+  position: relative;
+  margin-left: 52px;
+  padding: 16px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.shareActiveWrapper {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #1da1f2;
+  padding: 4px 9px;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.shareActiveMenu {
+  position: absolute;
+  z-index: 9;
+  border-radius: 5px;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+}
+
+.shareActiveMenuTexts {
+  padding: 15px;
+}
+
+.shareActiveMenuText {
+  margin-top: 3px;
+  color: rgb(100, 100, 100);
+  font-size: 15px;
+}
+
+.shareActiveMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.shareActiveMenuItem:hover {
+  background-color: #efefef;
+}
+
+.shareActiveMenuItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.shareActiveMenuIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #1da1f2;
+  border-radius: 50%;
+}
+
+.shareActiveMenuIcon {
+  color: white;
+  font-size: 20px;
+}
+
+.activeMenuCheckmark.active {
+  font-size: 20px;
+  color: #1da1f2;
+}
+
+.activeMenuCheckmark {
+  font-size: 20px;
+  color: transparent;
+}
+
+.shareActiveWrapper:hover {
+  background-color: #1a8ad025;
+}
+
+.shareBottom {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shareIconsContainer {
+  margin-left: 40px;
+  display: flex;
+}
+
+.shareIcon {
+  position: relative;
+  font-size: 20px;
+  margin-right: 10px;
+  color: #1da1f2;
+  padding: 7px 7px 4px 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.shareIcon:hover {
+  background-color: #9fcfed43;
+}
+
+.shareIsHovered {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 13px;
+  padding: 2px;
+}
+
+.shareIsHovered span {
+  color: white;
+}
+
+.emojiPickerContainer {
+  position: absolute;
+}
+
+.emoji-picker-react {
+  position: absolute;
+  left: -130px;
+  z-index: 999;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+}
+
+.shareButton {
+  height: 35px;
+  width: 65px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.shareButton:hover {
+  background-color: #1a8ad0;
+}
+
+.shareButton:disabled {
+  background-color: #1da0f27e;
+  pointer-events: none;
+}

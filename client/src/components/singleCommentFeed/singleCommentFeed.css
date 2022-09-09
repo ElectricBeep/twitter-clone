@@ -1,0 +1,109 @@
+.singleCommentFeed {
+  flex: 6.5;
+}
+
+.singleCommentPost,
+.singleCommentComment {
+  display: flex;
+  position: relative;
+}
+
+.singleCommentPost:hover {
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.singlePostFeedLeft {
+  position: relative;
+  padding: 10px 10px 0 15px;
+}
+
+.singlePostFeedRight {
+}
+
+.singleCommentFeedImg {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.singlePostFeedLine {
+  border-left: 3px solid lightgray;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+}
+
+.singlePostFeedRight {
+  width: 100%;
+  padding: 10px 15px 0 5px;
+}
+
+.singleCommentFeedTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.singlePostFeedUser {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.singleCommentFeedName {
+  cursor: pointer;
+}
+
+.singleCommentFeedName:hover {
+  text-decoration: underline;
+}
+
+.singleCommentFeedSmall {
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.singleCommentFeedPostDesc {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.singleCommentFeedMedia {
+  width: 100%;
+}
+
+.singleCommentPostBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 60px;
+  padding: 10px 0;
+}
+
+.singleCommentComment {
+  margin-top: 5px;
+  flex-direction: column;
+}
+
+.singlePostFeedLeftComment {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  padding: 10px 10px 0 15px;
+}
+
+.singleCommentFeedTexts {
+  margin-top: 5px;
+  padding: 0 15px;
+}
+
+.singleCommentFeedCommentText {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.singleCommentFeedMediaContainer {
+  padding: 10px 20px;
+}

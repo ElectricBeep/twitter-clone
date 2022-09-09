@@ -1,0 +1,475 @@
+.post {
+  border-bottom: 1px solid #e1e8ed;
+  position: relative;
+}
+
+.postWrapper {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.postWrapper:hover {
+  background-color: #efefef;
+}
+
+.postProfileImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.postProfileImg:hover {
+  filter: brightness(80%);
+}
+
+.postTop {
+  position: relative;
+  display: flex;
+  padding: 10px 15px 0 10px;
+}
+
+.postTopLeft {
+  display: flex;
+}
+
+.postTopRight {
+  margin-left: 17px;
+  width: 100%;
+}
+
+.postTopUserInfo {
+  display: flex;
+  gap: 10px;
+}
+
+.postTopUserName {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.postTopUserName:hover {
+  text-decoration: underline;
+}
+
+.postTopUserTags,
+.postTopPosted {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(100, 100, 100);
+}
+
+.postTopIcon,
+.postBottomIcon {
+  color: rgb(100, 100, 100);
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.postTopIcon:hover,
+.postBottomIcon:hover {
+  background-color: #9fcfed9b;
+}
+
+.postBottomIcon.share:hover {
+  background-color: rgba(0, 128, 0, 0.2);
+}
+
+.postBottomIcon.like:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.postTopHoverMenu {
+  z-index: 9;
+  position: absolute;
+  top: 28px;
+  left: -100px;
+  margin: auto;
+  width: 250px;
+  height: fit-content;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+}
+
+.postTopHoverMenuWrapper {
+  padding: 15px;
+}
+
+.postTopHoverMenuTopImg {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.postTopHoverMenuTopImg:hover {
+  filter: brightness(80%);
+}
+
+.postTopHoverMenuTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postTopHoverMenuUserName {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.postTopHoverMenuUserName:hover {
+  text-decoration: underline;
+}
+
+.postTopHoverMenuUserTags,
+.postTopHoverMenuFollowing {
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.postTopHoverMenuFollowing:hover {
+  text-decoration: underline;
+}
+
+.postTopHoverMenuUserDesc {
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.postTopHoverMenuFollowContainer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.postDescription {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.postContent {
+  padding: 10px 15px 0 10px;
+  margin-left: 62px;
+}
+
+.postContentImagesContainer2 {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 3px;
+}
+
+.postContentImagesContainer3 {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50% 50%;
+}
+
+.postContentImagesContainer3 .postContentImg1 {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.postContentImagesContainer4 {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+
+.postContentImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.postContentVideo {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.postBottom {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.postBottomItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.postBottomIcon {
+  color: rgb(100, 100, 100);
+}
+
+.postBottomItemCount {
+  color: rgb(100, 100, 100);
+  font-size: 14px;
+}
+
+.postOpenCommnet {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  height: max-content;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  z-index: 999;
+}
+
+.postOpenCommentTopWrapper {
+  padding: 50px 20px 10px 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.postOpenCommentBotWrapper {
+  margin-top: 50px;
+}
+
+.postOpenCommentMediaPreview {
+  position: relative;
+  padding: 0 10px;
+}
+
+.postOpenCommentMedia {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.postOpenCommentLeft {
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postOpenCommentLine {
+  border-left: 3px solid lightgray;
+  height: 70px;
+}
+
+.tagsSpan {
+  color: #1da1f2;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tagsSpan:hover {
+  text-decoration: underline;
+}
+
+.postOpenCommnetRightReply {
+  margin-top: 15px;
+  margin-left: 10px;
+  color: gray;
+}
+
+.postOpenCommentRightInput {
+  margin-top: 25px;
+  margin-left: 10px;
+  height: 30px;
+  font-size: 20px;
+  border: none;
+  width: 100%;
+}
+
+.postOpenCommentRightInput:focus {
+  outline: none;
+}
+
+.postOpenCommentReplyButton {
+  height: 35px;
+  width: 60px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.postOpenCommentReplyButton:hover {
+  background-color: #1a8ad0;
+}
+
+.postOpenCommentReplyButton:disabled {
+  background-color: #1da0f27e;
+  pointer-events: none;
+}
+
+.postOpenCommentIcons {
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+
+.postOpenCommentCloseIcon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.postOpenCommentCloseIcon:hover,
+.postOpenMoreItem:hover,
+.postOpenShareItem:hover {
+  background-color: #e1e8ed;
+}
+
+.postOpenMore {
+  z-index: 9;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border-radius: 5px;
+  height: fit-content;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+}
+
+.postOpenRetweet {
+  position: absolute;
+  bottom: 10px;
+  left: 140px;
+  background-color: white;
+  border-radius: 5px;
+  height: fit-content;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+}
+
+.postOpenMoreItem,
+.postOpenShareItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.postOpenMoreIcon,
+.postOpenShareIcon {
+  font-size: 20px;
+}
+
+.postOpenShare {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  background-color: white;
+  border-radius: 5px;
+  height: fit-content;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+}
+
+.postOpenImage {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.postOpenMedia {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 99vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.postOpenMediaWrapper {
+  position: relative;
+}
+
+.postOpenMediaCloseButton {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.postOpenMediaCloseButton:hover,
+.postOpenMediaArrowLeft:hover,
+.postOpenMediaArrowRight:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.postOpenMediaArrowLeft {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 25px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.postOpenMediaArrowRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 25px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.postOpenMediaImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

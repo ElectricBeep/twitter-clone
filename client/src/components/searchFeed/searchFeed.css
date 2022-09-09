@@ -1,0 +1,49 @@
+.searchFeed {
+  flex: 7;
+}
+
+.searchFeedWrapper {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchFeedIcon {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 50%;
+}
+
+.searchFeedIcon:hover {
+  background-color: #efefef;
+}
+
+.searchFeedImgContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.searchFeedImg {
+  width: 100%;
+  object-fit: cover;
+}
+
+.searchFeedImgText {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.searchFeedTextTag {
+  color: white;
+  font-size: 14px;
+}
+
+.searchFeedTextText {
+  margin-top: 5px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}

@@ -1,0 +1,191 @@
+.messages {
+  flex: 6.5;
+}
+
+.messagesNoConversation {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  border-right: 1px solid lightgray;
+}
+
+.messagesNoConversationText {
+  margin-top: 10px;
+  color: rgb(100, 100, 100);
+}
+
+.messagesNoConversationButton {
+  margin-top: 20px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  width: 200px;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.messagesNoConversationButton:hover {
+  background-color: #1a8ad0;
+}
+
+.messagesConversationContainer {
+  width: 85%;
+  height: 100%;
+  border-right: 1px solid lightgray;
+}
+
+.messagesConversationNavbar {
+  position: sticky;
+  top: 0;
+  width: 90%;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.messagesConversationNavbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.messagesProfileImg {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.messagesUserName {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.messagesUserTags {
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.messagesNavbarIcon {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+
+.messagesNavbarIcon:hover {
+  background-color: #e1e8ed;
+}
+
+.messagesMessagesContainer {
+  padding: 10px 15px;
+}
+
+.messagesMessage {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.messagesFriendProfileImg {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.messagesFriendProfileImg:hover {
+  filter: brightness(0.95);
+}
+
+.messagesMessageTextDateContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messagesText {
+  padding: 15px;
+  border-radius: 20px 20px 20px 0;
+  background-color: #e1e8ed;
+}
+
+.messagesTextOwn {
+  width: 85%;
+  padding: 15px;
+  border-radius: 20px 20px 0 20px;
+  background-color: #1da1f2;
+  color: white;
+  align-self: end;
+}
+
+.messagesDate {
+  margin-top: 2px;
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.messagesDateOwn {
+  margin-top: 2px;
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+  align-self: flex-end;
+}
+
+.messagesMoreIconContainer {
+  position: relative;
+  visibility: hidden;
+}
+
+.messagesMoreIcon {
+  color: rgb(100, 100, 100);
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.messagesMoreIcon:hover {
+  background-color: #9fcfed9b;
+}
+
+.messagesMessage:hover .messagesMoreIconContainer {
+  visibility: visible;
+}
+
+.messagesMoreMenu {
+  visibility: visible;
+  width: 200px;
+  position: absolute;
+  left: -100px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+}
+
+.messagesMoreMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.messagesMoreMenuItem:hover {
+  background-color: #e1e8ed;
+}
+
+.messagesMoreMenuIcon {
+  font-size: 20px;
+}

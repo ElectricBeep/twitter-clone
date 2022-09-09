@@ -1,0 +1,334 @@
+.profileFeed {
+  flex: 6.5;
+}
+
+.profileNavbar {
+  height: 50px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.profileNavbarBackIconContainer {
+  margin-left: 25px;
+}
+
+.profileNavbarBackIcon {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profileNavbarBackIcon:hover {
+  background-color: #9fcfed9b;
+}
+
+.profileNavbarUserName {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.profileNavbarUserTweetsCount {
+  font-size: 13px;
+  color: rgb(100, 100, 100);
+}
+
+.profileFeedImages {
+  position: relative;
+  height: 35vh;
+  background-color: #9fcfed9b;
+}
+
+.profileFeedCoverImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profileFeedProfileImg {
+  height: 140px;
+  width: 140px;
+  position: absolute;
+  bottom: -70px;
+  left: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.profileFeedSetup {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profileFeedSetupButton {
+  margin-right: 20px;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.profileFeedSetupButton:hover {
+  background-color: #9fcfed9b;
+}
+
+.profileFeedUserInfo {
+  height: 110px;
+  padding: 25px 20px;
+}
+
+.profileFeedUserName {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profileFeedUserTags {
+  color: rgb(100, 100, 100);
+}
+
+.profileFeedUserJoinedDate {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(100, 100, 100);
+}
+
+.profileFeedUserFollowContainer {
+  margin-top: 15px;
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.profileFeedUserFollowing:hover,
+.profileFeedUserFollowers:hover {
+  border-bottom: 1px solid black;
+}
+
+.profileFeedUserFollowText {
+  color: rgb(100, 100, 100);
+  font-size: 14px;
+}
+
+.profileFeedSelectorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profileFeedSelectorItem {
+  font-weight: bold;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(100, 100, 100);
+}
+
+.profileFeedSelectorItemActive {
+  font-weight: bold;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: black;
+  border-bottom: 3px solid #1da1f2;
+}
+
+.profileFeedSelectorItem:hover {
+  background-color: #9fcfed9b;
+}
+
+.profileFeedNoContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.profileFeedNoContentContainer > h1 {
+  width: 60%;
+}
+
+.profileFeedNoContentImg {
+  width: 70%;
+}
+
+.profileFeedNoContentText {
+  padding: 10px 0 50px 0;
+  width: 60%;
+  color: rgb(100, 100, 100);
+}
+
+.profileFeedSetUpProfilePopupContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #393939a2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.profileFeedSetUpProfilePopupWrapper {
+  height: 80vh;
+  width: 400px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  padding: 15px 90px;
+}
+
+.profileFeedSetUpProfileLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profileFeedSetUpProfileIcon {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profileFeedSetUpProfileIcon:hover {
+  background-color: #9fcfed9b;
+}
+
+.profileFeedSetUpProfileTitle {
+  margin-top: 30px;
+}
+
+.profileFeedSetUpProfileText {
+  margin-top: 5px;
+  color: rgb(100, 100, 100);
+  font-size: 15px;
+}
+
+.profileFeedSetUpProfileImgContainer {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileFeedSetUpProfileProfileImg {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileFeedSetUpProfileResetImg {
+  position: absolute;
+  font-size: 25px;
+  padding: 8px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(60, 60, 60, 0.2);
+  cursor: pointer;
+}
+
+.profileFeedSetUpProfileProfileLabel {
+  position: absolute;
+}
+
+.profileFeedSetUpProfileProfileImgIcon {
+  font-size: 25px;
+  padding: 8px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(60, 60, 60, 0.2);
+  cursor: pointer;
+}
+
+.profileFeedSetUpProfileProfileImgIcon:hover,
+.profileFeedSetUpProfileResetImg:hover {
+  background-color: rgba(75, 75, 75, 0.6);
+}
+
+.profileFeedSetUpProfileNextButton {
+  text-align: center;
+  margin-top: 100px;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.profileFeedSetUpProfileNextButton:hover {
+  background-color: rgba(0, 0, 0, 0.826);
+}
+
+.profileFeedSetUpProfileButton {
+  margin-top: 100px;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 50px;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.profileFeedSetUpProfileButton:hover {
+  background-color: #9fcfed9b;
+}
+
+.profileFeedSetUpProfileCoverImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profileFeedSetUpProfileTextarea {
+  margin-top: -100px;
+  width: calc(100% - 10px);
+  padding: 5px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.profileFeedSetUpProfileTextarea:focus {
+  outline-color: #1da1f2;
+}
+
+.profileFeedSetUpProfileInput {
+  font-size: 18px;
+  padding: 15px 5px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  margin-bottom: 170px;
+}
+
+.profileFeedSetUpProfileInput:focus {
+  outline-color: #1da1f2;
+}

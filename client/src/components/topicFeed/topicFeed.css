@@ -1,0 +1,284 @@
+.topicFeed {
+  flex: 6.5;
+}
+
+.topicFeedActiveContainer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.topicFeedActiveItem {
+  padding: 20px 60px;
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.topicFeedActiveItem:hover {
+  background-color: #efefef;
+}
+
+.topicFeedActiveItem.active {
+  color: black;
+  border-bottom: 3px solid #1da1f2;
+}
+
+.topicFeedText {
+  padding: 20px 15px;
+  font-size: 15px;
+  color: rgb(100, 100, 100);
+  border-bottom: 1px solid lightgray;
+}
+
+.topicFeedTopicItem {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.topicFeedTopicItem:hover {
+  background-color: #efefef;
+}
+
+.topicFeedTopicItemLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.topicFeedTopicItemIcon {
+  font-size: 20px;
+  padding: 5px;
+  background-color: #1da1f2;
+  color: white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.topicFeedTopicItemName {
+  font-weight: bold;
+}
+
+.topicFeedTopicItemName:hover {
+  text-decoration: underline;
+}
+
+.topicFeedTopicItemDesc {
+  margin-top: 5px;
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.topicFeedTopicItemButton {
+  width: 90px;
+  border: 1px solid lightgray;
+  font-weight: bold;
+  padding: 8px 15px;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.topicFeedTopicItemButton:hover .topicFeedTopicItemSpan {
+  display: none;
+}
+
+.topicFeedTopicItemButton:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.topicFeedTopicItemButton:hover::before {
+  content: "Unfollow";
+  color: red;
+}
+
+.topicFeedFollowed {
+  padding: 20px 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.topicFeedFollowedTitle {
+  margin-left: 10px;
+}
+
+.topicFeedFollowedDesc {
+  margin-left: 10px;
+  color: rgb(100, 100, 100);
+  font-size: 13px;
+}
+
+.topicFeedFollowedPillsContainer {
+  margin-top: 15px;
+}
+
+.topicFeedFollowedMoreButton {
+  margin-left: 10px;
+  border: none;
+  font-size: 16px;
+  color: #1da1f2;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.topicFeedFollowedMoreButton:hover {
+  background-color: #efefef;
+}
+
+.topicFeedFollowedBottom {
+  padding: 25px 15px;
+  font-size: 15px;
+  color: rgb(100, 100, 100);
+}
+
+.topicFeedspan {
+  color: #1da1f2;
+  cursor: pointer;
+}
+
+.topicFeedspan:hover {
+  text-decoration: underline;
+}
+
+.topicFeedSuggestedTitle {
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+.topicFeedSuggestedGridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  padding: 20px 10px;
+}
+
+.topicFeedGridItem {
+  text-align: center;
+  padding: 40px 15px;
+  background-color: #1da1f2;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.topicFeedGridItem:hover {
+  background-color: #1988cd;
+}
+
+.topicFeedSuggestedButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.topicFeedFollowedMoreButton.suggestedGrid {
+  margin-bottom: 10px;
+}
+
+.topicFeedGridCategory {
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+
+.topicFeedGridCategoryItem {
+  padding-bottom: 10px;
+  margin: 5px 5px;
+}
+
+.topicFeedGridPill {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  border: 1px solid lightgrey;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.topicFeedGridCategoryPill:hover {
+  background-color: #9fcfed9b;
+}
+
+.topicFeedGridPillIcon {
+  font-size: 20px;
+  color: #1da1f2;
+}
+
+.topicFeedGridCategoryPillContainer {
+  position: relative;
+}
+
+.topicFeedGridCategoryPillWrapper {
+  width: 650px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  transform: translateX(0px);
+  transition: all 1s ease;
+}
+
+.topicFeedGridCategoryPillWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.gridContainerIconLeft {
+  font-size: 30px;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+  color: rgb(50, 50, 50);
+  background-color: white;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.gridContainerIconRight {
+  font-size: 30px;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  cursor: pointer;
+  color: rgb(70, 70, 70);
+  background-color: white;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.topicFeedGridCategoryPillContainer:hover .gridContainerIconLeft,
+.topicFeedGridCategoryPillContainer:hover .gridContainerIconRight {
+  visibility: visible;
+}
+
+.gridContainerIconLeft:hover,
+.gridContainerIconRight:hover {
+  color: rgb(100, 100, 100);
+}
+
+.topicFeedNotInterestedContainer {
+  height: calc(100vh - 100px);
+  text-align: center;
+  padding: 50px 0;
+}
+
+.topicFeedNotInterestedImg {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.topicFeedNotInterestedText {
+  margin: 20px 100px;
+  color: rgb(100, 100, 100);
+}

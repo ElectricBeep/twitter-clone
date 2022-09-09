@@ -1,0 +1,162 @@
+.rightbar {
+  flex: 4;
+  border-left: 1px solid #e1e8ed;
+  position: sticky;
+  right: 0;
+  top: 0;
+}
+
+.rightbarWrapper {
+  width: 75%;
+  padding: 5px 0;
+  margin-left: 15px;
+}
+
+.rightbarSearchContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #e1e8ed;
+  border-radius: 50px;
+}
+
+.rightbarInput {
+  width: 100%;
+  border: none;
+  background-color: #e1e8ed;
+}
+
+.rightbarInput:focus {
+  outline: none;
+}
+
+.rightbarTrends,
+.rightbarFollow {
+  margin-top: 15px;
+  border-radius: 10px;
+  background-color: #e1e8ed;
+}
+
+.rightbarTrendsTitle,
+.rightbarFollowTitle {
+  padding: 10px;
+  font-size: 22px;
+}
+
+.rightbarTrendsItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.rightbarTrendsItems:hover {
+  background-color: lightgray;
+}
+
+.rightbarTrendsItemText {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 5px 0;
+}
+
+.rightbarTrendsItemTitle {
+  font-weight: bold;
+}
+
+.rightbarIcon {
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.rightbarIcon:hover {
+  background-color: #9fcfed9b;
+}
+
+.rightbarFollowContainer {
+  margin-top: 10px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.rightbarFollowContainer:hover {
+  background-color: lightgray;
+}
+
+.rightbarFollowLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rightbarFollowImg {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rightbarFollowUserName {
+  font-weight: bold;
+}
+
+.rightbarFollowUserTag {
+  font-weight: 400;
+  color: rgb(86, 85, 85);
+}
+
+.rightbarFollowButton {
+  height: 30px;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.rightbarFollowButton:hover {
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+.rightbarFollowMoreButton {
+  margin: 15px 0 15px 10px;
+  border: none;
+  background-color: transparent;
+  color: #1da1f2;
+  font-size: 17px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rightbarFollowMoreButton:hover {
+  background-color: lightgray;
+}
+
+.rightbarFooter {
+  margin-top: 15px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  font-size: 14px;
+  color: rgb(82, 81, 81);
+  cursor: pointer;
+}
+
+.rightbarFooterText:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .rightbar {
+    display: none;
+  }
+}
