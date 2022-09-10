@@ -76,6 +76,9 @@ const UserSchema = new mongoose.Schema({
   trackTwitterContent: {
     type: Boolean
   },
+  allowNotifications: {
+    type: Boolean
+  }
 }, { timestamps: true });
 
 export default mongoose.model("User", UserSchema);

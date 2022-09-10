@@ -33,13 +33,13 @@ const WhoToFollow = () => {
         {isShowMore ? (
           <>
             {filteredUsers?.map((user) => (
-              <UsersItem user={user} />
+              <UsersItem user={user} key={user._id} />
             ))}
           </>
         ) : (
           <>
             {filteredUsers?.slice(0, 3).map((user) => (
-              <UsersItem user={user} />
+              <UsersItem user={user} key={user._id} />
             ))}
           </>
         )}

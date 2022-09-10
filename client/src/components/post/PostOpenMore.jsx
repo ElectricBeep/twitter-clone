@@ -98,7 +98,8 @@ const PostOpenMore = ({ setPosts, setOpenMore, user, userId, postId }) => {
       ) : (
         <>
           <div
-            className="postOpenMoreItem" style={{ color: "red" }}
+            className="postOpenMoreItem"
+            style={{ color: "red" }}
             onClick={(e) => handleDeletePost(e, postId)}
           >
             <BsTrash className="postOpenMoreIcon" />
@@ -122,7 +123,7 @@ const PostOpenMore = ({ setPosts, setOpenMore, user, userId, postId }) => {
           </div>
           <div className="postOpenMoreItem">
             <FiBarChart2 className="postOpenMoreIcon" />
-            <p>View Tweet analztics</p>
+            <p>View Tweet analitycs</p>
           </div>
         </>
       )}

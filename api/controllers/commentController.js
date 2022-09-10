@@ -63,3 +63,16 @@ export const getUsersWhoLiked = async (req, res, next) => {
     next(err);
   };
 };
+
+export const deleteComment = async (req, res, next) => {
+  const commentId = req.params.commentId;
+  try {
+    const comment = await Comment.findById(commentId);
+    const post = await Post.findById(comment.postId);
+    await post.updateOne({ $inc: { commentsCount: -1 } });
+    await Comment.findByIdAndDelete(commentId);
+    res.status(200).json("Comment was deleted!");
+  } catch (err) {
+    next(err);
+  };
+};

@@ -16,7 +16,7 @@ import noAvatar from "../../assets/noAvatar.webp";
 import { addToLikedComments } from "../../redux/userReducer";
 import PostOpenMedia from "../post/PostOpenMedia";
 
-const Comment = ({ comment, currentPost }) => {
+const Comment = ({ comment, currentPost, setComments }) => {
   const [postCreator, setPostCreator] = useState(null);
   const [commentLike, setCommentLike] = useState(comment?.likes?.length);
   const [isCommentLiked, setIsCommentLiked] = useState(false);
@@ -90,7 +90,7 @@ const Comment = ({ comment, currentPost }) => {
           <div className="commentUserInfo">
             <Link to={`/profile/${commentCreator?._id}`} className="link">
               <div className="commentUserInfoName">
-                {commentCreator?.username}
+                {commentCreator?.name}
               </div>
             </Link>
             <div className="commentUserInfoTags">
@@ -110,7 +110,12 @@ const Comment = ({ comment, currentPost }) => {
         />
         {
           openMore && (
-            <CommentOpenMore setOpenMore={setOpenMore} />
+            <CommentOpenMore
+              setComments={setComments}
+              commentId={comment?._id}
+              commentCreator={commentCreator}
+              setOpenMore={setOpenMore}
+            />
           )
         }
       </div>

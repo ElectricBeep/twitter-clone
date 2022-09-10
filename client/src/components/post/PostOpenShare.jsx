@@ -34,6 +34,20 @@ const PostOpenShare = ({ setOpenShare, postId, currentUser }) => {
     };
   };
 
+  const handleCopyLink = async () => {
+    if (window.location.href === "http://localhost:3000/") {
+      navigator.clipboard.writeText(window.location.href + `post/${postId}`);
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+    };
+    toast.success("Copied to clipboard", {
+      style: {
+        backgroundColor: "#1da1f2",
+        color: "white",
+      },
+    });
+  };
+
   return (
     <div className="postOpenShare">
       <div
@@ -49,7 +63,10 @@ const PostOpenShare = ({ setOpenShare, postId, currentUser }) => {
         <BsEnvelope className="postOpenShareIcon" />
         <p>Send via Direct Message</p>
       </div>
-      <div className="postOpenShareItem">
+      <div
+        className="postOpenShareItem"
+        onClick={handleCopyLink}
+      >
         <BiLink className="postOpenShareIcon" />
         <p>Copy link to Tweet</p>
       </div>

@@ -6,8 +6,10 @@ import { BASE_URL } from "../../baseUrl";
 
 import noAvatar from "../../assets/noAvatar.webp";
 import { addToFollowings } from "../../redux/userReducer";
+import PostHover from "../post/PostHover";
 
 const UsersItem = ({ user }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
 
@@ -36,8 +38,21 @@ const UsersItem = ({ user }) => {
         />
         <div>
           <Link to={`/profile/${user?._id}`} className="link">
-            <h4 className="usersName">
-              {user?.username}
+            <h4
+              style={{ position: "relative" }}
+              className="usersName"
+              onMouseOver={() => setIsHovered(true)}
+              onMouseOut={() => setIsHovered(false)}
+            >
+              {user?.name}
+              {isHovered && (
+                <div
+                  style={{ top: "18px" }}
+                  className="postTopHoverMenu"
+                >
+                  <PostHover user={user} />
+                </div>
+              )}
             </h4>
           </Link>
           <span className="usersTags">

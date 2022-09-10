@@ -1,3 +1,107 @@
 .home {
   display: flex;
 }
+
+.homeOpenRegister {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #393939a2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+
+.homeOpenRegisterWrapper {
+  position: relative;
+  height: 80vh;
+  width: 400px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  padding: 15px 90px;
+}
+
+.homeOpenRegisterIconContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeOpenRegisterIcon {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 80px;
+  color: #1da1f2;
+}
+
+.homeOpenRegisterMiddleContainer {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto auto;
+  height: 43vh;
+  overflow: auto;
+}
+
+.homeOpenRegisterMiddleContainer::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.homeOpenRegisterMiddleItem {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeOpenRegisterMiddleItem:hover {
+  background-color: #efefef;
+}
+
+.homeOpenRegisterBottomContainer {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border-top: 1px solid lightgray;
+  background-color: white;
+}
+
+.homeOpenRegisterBottomContainerLeft {
+  font-size: 15px;
+  color: rgb(100, 100, 100);
+}
+
+.homeOpenRegisterBlackButton {
+  width: 80px;
+  padding: 10px 10px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.homeOpenRegisterBlackButton:hover {
+  background-color: rgba(0, 0, 0, 0.826);
+}

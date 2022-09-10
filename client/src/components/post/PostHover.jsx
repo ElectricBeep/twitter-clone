@@ -63,12 +63,16 @@ const PostHover = ({ user }) => {
         {user.about ? user.about : <span className="postTopHoverMenuUserTags">User didn't add about an section.</span>}
       </div>
       <div className="postTopHoverMenuFollowContainer">
-        <div className="postTopHoverMenuFollowing">
-          <span style={{ color: "black" }}><b>{user.followings.length}</b></span> Following
-        </div>
-        <div className="postTopHoverMenuFollowing">
-          <span style={{ color: "black" }}><b>{user.followers.length}</b></span> Followers
-        </div>
+        <Link to={`/following/${user?._id}`} className="link">
+          <div className="postTopHoverMenuFollowing">
+            <span style={{ color: "black" }}><b>{user.followings.length}</b></span> Following
+          </div>
+        </Link>
+        <Link to={`/followers/${user?._id}`} className="link">
+          <div className="postTopHoverMenuFollowing">
+            <span style={{ color: "black" }}><b>{user.followers.length}</b></span> Followers
+          </div>
+        </Link>
       </div>
     </div>
   )

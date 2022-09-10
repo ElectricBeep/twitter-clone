@@ -56,7 +56,7 @@ const OpenRegister = ({ setOpenRegister }) => {
         trackTwitterContent: checked
       });
       dispatch(signupSuccess(res.data));
-      navigate("/");
+      navigate("/", { state: { openRegisterInput: true } });
     } catch (err) {
       dispatch(signupFailure());
     };

@@ -25,6 +25,7 @@ const Comments = ({ currentPost, setComments, comments }) => {
     <div className="comments">
       {comments.map((comment) => (
         <Comment
+          setComments={setComments}
           comment={comment}
           key={comment._id}
           currentPost={currentPost}
