@@ -73,6 +73,9 @@ const UserSchema = new mongoose.Schema({
     type: Array,
     default: [],
   },
+  preferredContent: {
+    type: Array,
+  },
   trackTwitterContent: {
     type: Boolean
   },

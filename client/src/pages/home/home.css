@@ -73,6 +73,22 @@
   background-color: #efefef;
 }
 
+.homeOpenRegisterItemActive {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1da1f2;
+  color: white;
+}
+
 .homeOpenRegisterBottomContainer {
   position: absolute;
   bottom: 0;
@@ -104,4 +120,23 @@
 
 .homeOpenRegisterBlackButton:hover {
   background-color: rgba(0, 0, 0, 0.826);
+}
+
+.homeOpenRegisterBlackButton:disabled {
+  background-color: gray;
+  pointer-events: none;
+}
+
+.homeOpenRegisterSubtitle {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.homeOpenRegisterUsersContainer {
+  height: 43vh;
+  overflow: auto;
+}
+
+.homeOpenRegisterUsersContainer::-webkit-scrollbar {
+  width: 0;
 }

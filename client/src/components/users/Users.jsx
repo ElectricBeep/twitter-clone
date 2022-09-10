@@ -9,7 +9,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import UsersItem from "./UsersItem";
 import "./users.css";
 
-const Users = ({ setOpenRetweets, setOpenLikes, postId, type, currentUser, commentId }) => {
+const Users = ({ setOpenRetweets, setOpenLikes, postId, type, commentId }) => {
   const [users, setUsers] = useState(null);
   const [user, setUser] = useState(null);
   const location = useLocation();
@@ -88,7 +88,6 @@ const Users = ({ setOpenRetweets, setOpenLikes, postId, type, currentUser, comme
       getUserFollowers();
     };
   }, [user, active, type]);
-
 
   const handleClose = () => {
     if (setOpenRetweets) {

@@ -14,6 +14,7 @@ import storage from "redux-persist/lib/storage";
 import userReducer from "./userReducer";
 import postReducer from "./postReducer";
 import commentReducer from "./commentReducer";
+import registerUpdateReducer from "./registerUpdateReducer";
 
 const persistConfig = {
   key: "TwitterUser",
@@ -25,6 +26,7 @@ const rootReducer = combineReducers({
   user: userReducer,
   post: postReducer,
   comment: commentReducer,
+  registerUpdate: registerUpdateReducer
 }, persistConfig);
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

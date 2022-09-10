@@ -9,7 +9,7 @@ import "./feed.css";
 import { BASE_URL } from "../../baseUrl";
 import WhoToFollow from "../whoToFollow/WhoToFollow";
 
-const Feed = ({ title, location }) => {
+const Feed = ({ title }) => {
   const [posts, setPosts] = useState([]);
   const { currentUser } = useSelector((state) => state.user);
 

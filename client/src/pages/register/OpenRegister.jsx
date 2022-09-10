@@ -5,10 +5,11 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import BeatLoader from "react-spinners/BeatLoader";
+import { useSelector } from "react-redux";
 
 import { signupFailure, signupStart, signupSuccess } from "../../redux/userReducer";
 import { BASE_URL } from "../../baseUrl";
-import { useSelector } from "react-redux";
+import { openBox } from "../../redux/registerUpdateReducer";
 
 const OpenRegister = ({ setOpenRegister }) => {
   const [registerPage, setRegisterPage] = useState(1);
@@ -56,7 +57,8 @@ const OpenRegister = ({ setOpenRegister }) => {
         trackTwitterContent: checked
       });
       dispatch(signupSuccess(res.data));
-      navigate("/", { state: { openRegisterInput: true } });
+      dispatch(openBox());
+      navigate("/");
     } catch (err) {
       dispatch(signupFailure());
     };
@@ -283,6 +285,16 @@ const OpenRegister = ({ setOpenRegister }) => {
                   <option value="1998">1998</option>
                   <option value="1999">1999</option>
                   <option value="2000">2000</option>
+                  <option value="2000">2001</option>
+                  <option value="2000">2002</option>
+                  <option value="2000">2003</option>
+                  <option value="2000">2004</option>
+                  <option value="2000">2005</option>
+                  <option value="2000">2006</option>
+                  <option value="2000">2007</option>
+                  <option value="2000">2008</option>
+                  <option value="2000">2009</option>
+                  <option value="2000">2010</option>
                 </select>
               </div>
             </>

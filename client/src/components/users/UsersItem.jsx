@@ -6,10 +6,8 @@ import { BASE_URL } from "../../baseUrl";
 
 import noAvatar from "../../assets/noAvatar.webp";
 import { addToFollowings } from "../../redux/userReducer";
-import PostHover from "../post/PostHover";
 
-const UsersItem = ({ user }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const UsersItem = ({ user, type }) => {
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
 
@@ -29,7 +27,7 @@ const UsersItem = ({ user }) => {
   const [isUserFollowed, setIsUserFollowed] = useState(currentUser?.followings?.includes(user?._id));
 
   return (
-    <div className="usersItem">
+    <div className={type === "register" ? "usersItemRegister" : "usersItem"}>
       <div className="usersItemLeft">
         <img
           src={user?.profilePicture ? user.profilePicture : noAvatar}
@@ -38,21 +36,8 @@ const UsersItem = ({ user }) => {
         />
         <div>
           <Link to={`/profile/${user?._id}`} className="link">
-            <h4
-              style={{ position: "relative" }}
-              className="usersName"
-              onMouseOver={() => setIsHovered(true)}
-              onMouseOut={() => setIsHovered(false)}
-            >
+            <h4 className="usersName">
               {user?.name}
-              {isHovered && (
-                <div
-                  style={{ top: "18px" }}
-                  className="postTopHoverMenu"
-                >
-                  <PostHover user={user} />
-                </div>
-              )}
             </h4>
           </Link>
           <span className="usersTags">
