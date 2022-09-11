@@ -8,7 +8,7 @@ import RegisterUpdate from "./RegisterUpdate";
 
 const Home = () => {
   const { isRegisterUpdateOpen } = useSelector((state) => state.registerUpdate);
-
+  // const app = 0
   return (
     <div className="home">
       {isRegisterUpdateOpen && (
