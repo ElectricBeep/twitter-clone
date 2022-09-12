@@ -16,6 +16,7 @@ const Users = ({ setOpenRetweets, setOpenLikes, postId, type, commentId }) => {
   const params = useParams();
   const [active, setActive] = useState(location?.pathname?.split("/")[1]);
 
+  //get users who liked a post
   useEffect(() => {
     if (type === "liked" && postId) {
       const getUsersWhoLikedPost = async () => {
@@ -27,6 +28,21 @@ const Users = ({ setOpenRetweets, setOpenLikes, postId, type, commentId }) => {
         };
       };
       getUsersWhoLikedPost();
+    };
+  }, [postId, type]);
+
+  //get users who retweeted a post
+  useEffect(() => {
+    if (type === "retweeted" && postId) {
+      const getUsersWhoRetweetedPost = async () => {
+        try {
+          const res = await axios.get(`${BASE_URL}/posts/retweets/${postId}`);
+          setUsers(res.data);
+        } catch (err) {
+          console.log(err);
+        };
+      };
+      getUsersWhoRetweetedPost();
     };
   }, [postId, type]);
 

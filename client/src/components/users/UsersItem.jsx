@@ -48,21 +48,31 @@ const UsersItem = ({ user, type }) => {
           </p>
         </div>
       </div>
-      <div className="usersItemRight">
-        {isUserFollowed ? (
-          <button
-            className="topicFeedTopicItemButton"
-            onClick={handleFollow}
-          >
-            <span className="topicFeedTopicItemSpan">Following</span>
-          </button>
+      <div>
+        {currentUser?._id === user?._id ? (
+          <Link to={`/profile/${user?._id}`} className="link">
+            <div className="usersItemRightProfileButton">
+              Profile
+            </div>
+          </Link>
         ) : (
-          <button
-            className="rightbarFollowButton"
-            onClick={handleFollow}
-          >
-            Follow
-          </button>
+          <>
+            {isUserFollowed ? (
+              <button
+                className="topicFeedTopicItemButton"
+                onClick={handleFollow}
+              >
+                <span className="topicFeedTopicItemSpan">Following</span>
+              </button>
+            ) : (
+              <button
+                className="rightbarFollowButton"
+                onClick={handleFollow}
+              >
+                Follow
+              </button>
+            )}
+          </>
         )}
       </div>
     </div>

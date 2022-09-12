@@ -156,3 +156,19 @@
   font-size: 14px;
   color: rgb(100, 100, 100);
 }
+
+.usersItemRightProfileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightgray;
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.usersItemRightProfileButton:hover {
+  background-color: #efefef;
+}

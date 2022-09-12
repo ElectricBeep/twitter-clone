@@ -15,7 +15,7 @@ import PostOpenShare from "./PostOpenShare";
 import PostHover from "./PostHover";
 import noAvatar from "../../assets/noAvatar.webp";
 import { BASE_URL } from "../../baseUrl";
-import { addToLikedPosts } from "../../redux/userReducer";
+import { addToLikedPosts, addToSharedPosts } from "../../redux/userReducer";
 import PostOpenRetweet from "./PostOpenRetweet";
 import PostOpenMedia from "./PostOpenMedia";
 
@@ -28,6 +28,8 @@ const Post = ({ post, setPosts }) => {
   const [user, setUser] = useState(null);
   const [like, setLike] = useState(post?.likes?.length);
   const [isLiked, setIsLiked] = useState(false);
+  const [share, setShare] = useState(post?.shares?.length);
+  const [isShared, setIsShared] = useState(false);
   const [openMedia, setOpenMedia] = useState(false);
   const [slideNumber, setSlideNumber] = useState(0);
   const [commentCount, setCommentCount] = useState(post?.commentsCount);
@@ -75,6 +77,11 @@ const Post = ({ post, setPosts }) => {
     setIsLiked(post?.likes?.includes(currentUser._id));
   }, [currentUser._id, post?.likes]);
 
+  //check if current user has already shared a post
+  useEffect(() => {
+    setIsShared(post?.shares?.includes(currentUser._id));
+  }, [currentUser._id, post?.shares]);
+
   //like a post
   const handleLike = async (postId) => {
     try {
@@ -89,10 +96,24 @@ const Post = ({ post, setPosts }) => {
     };
   };
 
+  //share a post
+  const handleShare = async (postId) => {
+    try {
+      await axios.put(`${BASE_URL}/users/share/${postId}`, {
+        userId: currentUser._id
+      });
+      dispatch(addToSharedPosts(postId));
+      setShare(isShared ? share - 1 : share + 1);
+      setIsShared(!isShared);
+      setOpenRetweet(false);
+    } catch (err) {
+      console.log(err);
+    };
+  };
+
   //to play/pause video
   useEffect(() => {
     if (post?.video) {
-
       let options = {
         rootMargin: "0px",
         threshold: [0.25, 0.75]
@@ -212,10 +233,27 @@ const Post = ({ post, setPosts }) => {
                 handleOpen(("retweet"))
               }}
             >
-              <AiOutlineSync className="postBottomIcon share" />
-              <p className="postBottomItemCount">
-                {post?.shares?.length}
-              </p>
+              {isShared ? (
+                <>
+                  <AiOutlineSync
+                    style={{ color: "green" }}
+                    className="postBottomIcon share"
+                  />
+                  <p
+                    style={{ color: "green" }}
+                    className="postBottomItemCount"
+                  >
+                    {share}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <AiOutlineSync className="postBottomIcon share" />
+                  <p className="postBottomItemCount">
+                    {share}
+                  </p>
+                </>
+              )}
             </div>
             <div
               className="postBottomItem"
@@ -225,13 +263,26 @@ const Post = ({ post, setPosts }) => {
               }}
             >
               {isLiked ? (
-                <AiFillHeart className="postBottomIcon like" style={{ color: "red" }} />
+                <>
+                  <AiFillHeart
+                    className="postBottomIcon like"
+                    style={{ color: "red" }}
+                  />
+                  <p
+                    className="postBottomItemCount"
+                    style={{ color: "red" }}
+                  >
+                    {like}
+                  </p>
+                </>
               ) : (
-                <AiOutlineHeart className="postBottomIcon like" />
+                <>
+                  <AiOutlineHeart className="postBottomIcon like" />
+                  <p className="postBottomItemCount">
+                    {like}
+                  </p>
+                </>
               )}
-              <p className="postBottomItemCount">
-                {like}
-              </p>
             </div>
             <div
               className="postBottomItem"
@@ -277,7 +328,13 @@ const Post = ({ post, setPosts }) => {
       }
       {
         openRetweet && (
-          <PostOpenRetweet setOpenRetweet={setOpenRetweet} />
+          <PostOpenRetweet
+            setOpenRetweet={setOpenRetweet}
+            handleShare={handleShare}
+            postId={post?._id}
+            currentUser={currentUser}
+            isShared={isShared}
+          />
         )
       }
       {

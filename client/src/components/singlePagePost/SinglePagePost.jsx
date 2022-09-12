@@ -17,7 +17,7 @@ import PostOpenShare from "../post/PostOpenShare";
 import noAvatar from "../../assets/noAvatar.webp";
 import { BASE_URL } from "../../baseUrl";
 import PostHover from "../post/PostHover";
-import { addToLikedPosts } from "../../redux/userReducer";
+import { addToLikedPosts, addToSharedPosts } from "../../redux/userReducer";
 import Users from "../users/Users";
 
 const SinglePagePost = ({ currentPost, currentUser, postCreator }) => {
@@ -26,6 +26,7 @@ const SinglePagePost = ({ currentPost, currentUser, postCreator }) => {
   const [openShare, setOpenShare] = useState(false);
   const [openRetweet, setOpenRetweet] = useState(false);
   const [isLiked, setIsLiked] = useState(currentPost?.likes?.includes(currentUser?._id));
+  const [isShared, setIsShared] = useState(currentPost?.shares?.includes(currentUser?._id));
   const [isHovered, setIsHovered] = useState(false);
   const [openMedia, setOpenMedia] = useState(false);
   const [slideNumber, setSlideNumber] = useState(0);
@@ -66,6 +67,20 @@ const SinglePagePost = ({ currentPost, currentUser, postCreator }) => {
       });
       setIsLiked(!isLiked);
       dispatch(addToLikedPosts(postId));
+    } catch (err) {
+      console.log(err);
+    };
+  };
+
+  //share a post
+  const handleShare = async (postId) => {
+    try {
+      await axios.put(`${BASE_URL}/users/share/${postId}`, {
+        userId: currentUser._id
+      });
+      dispatch(addToSharedPosts(postId));
+      setIsShared(!isShared);
+      setOpenRetweet(false);
     } catch (err) {
       console.log(err);
     };
@@ -173,7 +188,14 @@ const SinglePagePost = ({ currentPost, currentUser, postCreator }) => {
             className="postBottomItem"
             onClick={() => handleOpen("retweet")}
           >
-            <AiOutlineSync className="postBottomIcon share" />
+            {isShared ? (
+              <AiOutlineSync
+                style={{ color: "green" }}
+                className="postBottomIcon share"
+              />
+            ) : (
+              <AiOutlineSync className="postBottomIcon share" />
+            )}
           </div>
           <div
             className="postBottomItem"
@@ -214,12 +236,21 @@ const SinglePagePost = ({ currentPost, currentUser, postCreator }) => {
       }
       {
         openShare && (
-          <PostOpenShare setOpenShare={setOpenShare} />
+          <PostOpenShare
+            setOpenShare={setOpenShare}
+            currentUser={currentUser}
+            postId={currentPost?._id}
+          />
         )
       }
       {
         openRetweet && (
-          <PostOpenRetweet setOpenRetweet={setOpenRetweet} />
+          <PostOpenRetweet
+            setOpenRetweet={setOpenRetweet}
+            handleShare={handleShare}
+            isShared={isShared}
+            postId={currentPost?._id}
+          />
         )
       }
       {
@@ -238,6 +269,7 @@ const SinglePagePost = ({ currentPost, currentUser, postCreator }) => {
           <Users
             setOpenRetweets={setOpenRetweets}
             type="retweeted"
+            postId={currentPost?._id}
           />
         )
       }

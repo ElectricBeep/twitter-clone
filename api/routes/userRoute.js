@@ -1,5 +1,5 @@
 import express from "express";
-import { bookmarkPost, followUser, getBookmarks, getComments, getFollowers, getFollowings, getLikedComments, getLikedPosts, getRandomUsers, getUser, getUsers, getUsersPosts, likeComment, likePost, updateUser } from "../controllers/userController.js";
+import { bookmarkPost, followUser, getBookmarks, getComments, getFollowers, getFollowings, getLikedComments, getLikedPosts, getRandomUsers, getUser, getUsers, getUsersPosts, likeComment, likePost, sharePost, updateUser } from "../controllers/userController.js";
 
 const router = express.Router();
 
@@ -23,6 +23,8 @@ router.put("/follow/:currentUserId", followUser);
 
 //BOOKMARK A POST
 router.put("/bookmark/:postId", bookmarkPost);
+
+router.put("/share/:postId", sharePost);
 
 //GET USER'S POSTS
 router.get("/posts/:userId", getUsersPosts);

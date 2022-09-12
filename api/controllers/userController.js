@@ -41,6 +41,28 @@ export const likePost = async (req, res, next) => {
   };
 };
 
+export const sharePost = async (req, res, next) => {
+  const postId = req.params.postId;
+  const userId = req.body.userId;
+  try {
+    const post = await Post.findById(postId);
+    const user = await User.findById(userId);
+    if (!user.sharedPosts.includes(postId)) {
+      await post.updateOne({ $push: { shares: userId } });
+      await post.updateOne({ $inc: { sharesCount: +1 } });
+      await user.updateOne({ $push: { sharedPosts: postId } });
+      res.status(200).send("Post has been shared!");
+    } else {
+      await post.updateOne({ $pull: { shares: userId } });
+      await post.updateOne({ $inc: { sharesCount: -1 } });
+      await user.updateOne({ $pull: { sharedPosts: postId } });
+      res.status(200).send("Post has been unshared!");
+    }
+  } catch (err) {
+    next(err);
+  };
+};
+
 export const likeComment = async (req, res, next) => {
   const commentId = req.params.commentId;
   const userId = req.body.userId;

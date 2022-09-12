@@ -63,6 +63,28 @@ export const getUsersWhoLiked = async (req, res, next) => {
   };
 };
 
+export const getUsersWhoRetweeted = async (req, res, next) => {
+  const postId = req.params.postId;
+  try {
+    const post = await Post.findById(postId);
+    const usersWhoRetweeted = await Promise.all(
+      post.shares.map((userId) => {
+        return User.findById(userId);
+      })
+    );
+
+    let usersList = [];
+    usersWhoRetweeted.map((user) => {
+      const { _id, username, profilePicture, about } = user;
+      usersList.push({ _id, username, profilePicture, about });
+    });
+
+    res.status(200).json(usersList);
+  } catch (err) {
+    next(err);
+  };
+};
+
 export const getTimeline = async (req, res, next) => {
   const userId = req.params.userId;
   try {

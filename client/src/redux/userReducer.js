@@ -84,6 +84,15 @@ const userSlice = createSlice({
         );
       };
     },
+    addToSharedPosts: (state, action) => {
+      if (!state.currentUser.sharedPosts.includes(action.payload)) {
+        state.currentUser.sharedPosts.push(action.payload);
+      } else {
+        state.currentUser.sharedPosts.splice(state.currentUser.sharedPosts.findIndex(
+          (postId) => postId === action.payload), 1
+        );
+      };
+    },
   }
 });
 
@@ -99,6 +108,7 @@ export const {
   addToLikedComments,
   addToFollowings,
   updateUser,
-  addToBookmarks
+  addToBookmarks,
+  addToSharedPosts
 } = userSlice.actions;
 export default userSlice.reducer;

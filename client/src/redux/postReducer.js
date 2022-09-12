@@ -23,14 +23,6 @@ const postSlice = createSlice({
       state.currentPost = null;
       state.isLoading = false;
     },
-    // likePost: (state, action) => {
-    //   if (!state.currentPost.likes.includes(action.payload)) {
-    //     state.currentPost.likes.push(action.payload);
-    //     state.currentPost.likes.splice(state.currentPost.likes.findIndex(
-    //       (userId) => userId === action.payload), 1
-    //     );
-    //   }
-    // },
     incPostCommentCount: (state) => {
       state.currentPost.commentsCount += 1;
     },
@@ -41,7 +33,6 @@ export const {
   fetchStart,
   fetchSuccess,
   fetchFailure,
-  // likePost,
   incPostCommentCount,
 } = postSlice.actions;
 export default postSlice.reducer;

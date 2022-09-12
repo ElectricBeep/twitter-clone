@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import moment from "moment";
 
 import "./profileFeed.css";
@@ -15,6 +15,7 @@ import OpenSetupProfile from "./OpenSetupProfile";
 import SingleComment from "../singleComment/SingleComment";
 import Comment from "../comment/Comment";
 import WhoToFollow from "../whoToFollow/WhoToFollow";
+import { addToFollowings } from "../../redux/userReducer";
 
 const ProfileFeed = () => {
   const [active, setActive] = useState("tweets");
@@ -30,7 +31,7 @@ const ProfileFeed = () => {
   const [usersLikedPosts, setUsersLikedPosts] = useState([]);
   const [usersLikedComments, setUsersLikedComments] = useState([]);
   const { currentUser } = useSelector((state) => state.user);
-
+  const dispatch = useDispatch();
   const params = useParams();
 
   //get user
@@ -110,6 +111,21 @@ const ProfileFeed = () => {
     };
   }, [user]);
 
+  const [isUserFollowed, setIsUserFollowed] = useState(currentUser?.followings?.includes(user?._id));
+
+  const handleFollow = async () => {
+    try {
+      const res = await axios.put(`${BASE_URL}/users/follow/${currentUser._id}`, {
+        userId: user._id
+      });
+      console.log(res.data);
+      dispatch(addToFollowings(user._id));
+      setIsUserFollowed((prev) => !prev);
+    } catch (err) {
+      console.log(err);
+    };
+  };
+
   return (
     <div className="profileFeed">
       <div className="profileNavbar">
@@ -141,12 +157,32 @@ const ProfileFeed = () => {
         />
       </div>
       <div className="profileFeedSetup">
-        <button
-          className="profileFeedSetupButton"
-          onClick={() => setOpenSetUpProfile((prev) => !prev)}
-        >
-          Set up profile
-        </button>
+        {currentUser?._id !== user?._id ? (
+          <div style={{ marginRight: "15px" }}>
+            {isUserFollowed ? (
+              <button
+                className="topicFeedTopicItemButton"
+                onClick={handleFollow}
+              >
+                <span className="topicFeedTopicItemSpan">Following</span>
+              </button>
+            ) : (
+              <button
+                className="rightbarFollowButton"
+                onClick={handleFollow}
+              >
+                Follow
+              </button>
+            )}
+          </div>
+        ) : (
+          <button
+            className="profileFeedSetupButton"
+            onClick={() => setOpenSetUpProfile((prev) => !prev)}
+          >
+            Set up profile
+          </button>
+        )}
       </div>
       <div className="profileFeedUserInfo">
         <div className="profileFeedUserName">

@@ -1,12 +1,15 @@
 import { AiOutlineSync, AiOutlineClose } from "react-icons/ai";
 import { BsPencil } from "react-icons/bs";
 
-const PostOpenRetweet = ({ setOpenRetweet }) => {
+const PostOpenRetweet = ({ setOpenRetweet, handleShare, postId, isShared }) => {
   return (
     <div className="postOpenRetweet">
-      <div className="postOpenShareItem">
+      <div
+        className="postOpenShareItem"
+        onClick={() => handleShare(postId)}
+      >
         <AiOutlineSync className="postOpenShareIcon" />
-        <p>Retweet</p>
+        <p>{isShared ? "Undo Retweet" : "Retweet"}</p>
       </div>
       <div className="postOpenShareItem">
         <BsPencil className="postOpenShareIcon" />

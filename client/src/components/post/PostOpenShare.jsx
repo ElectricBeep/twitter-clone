@@ -35,11 +35,7 @@ const PostOpenShare = ({ setOpenShare, postId, currentUser }) => {
   };
 
   const handleCopyLink = async () => {
-    if (window.location.href === "http://localhost:3000/") {
-      navigator.clipboard.writeText(window.location.href + `post/${postId}`);
-    } else {
-      navigator.clipboard.writeText(window.location.href);
-    };
+    navigator.clipboard.writeText(`http://localhost:3000/post/${postId}`);
     toast.success("Copied to clipboard", {
       style: {
         backgroundColor: "#1da1f2",
