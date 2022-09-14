@@ -20,7 +20,7 @@ import PostHover from "../post/PostHover";
 import { addToLikedPosts, addToSharedPosts } from "../../redux/userReducer";
 import Users from "../users/Users";
 
-const SinglePagePost = ({ currentPost, currentUser, postCreator }) => {
+const SinglePagePost = ({ currentPost, currentUser, postCreator, type }) => {
   const [openMore, setOpenMore] = useState(false);
   const [openComment, setOpenComment] = useState(false);
   const [openShare, setOpenShare] = useState(false);
@@ -132,29 +132,36 @@ const SinglePagePost = ({ currentPost, currentUser, postCreator }) => {
             <div className="singlePagePostDesc">
               {currentPost?.desc}
             </div>
-            <div className={`postContentImagesContainer${currentPost?.images?.length}`}>
-              {currentPost?.images?.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt="post content"
-                  className={`postContentImg postContentImg${index}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setSlideNumber(index);
-                    setOpenMedia(true);
-                  }}
-                />
-              ))}
-            </div>
-            {currentPost?.video && (
-              <video
-                src={currentPost.video}
-                controls
-                ref={videoRef}
-                muted
-                className="postContentVideo"
-              />
+            {type !== "commentSection" && (
+              <>
+                <div
+                  className={`postContentImagesContainer${currentPost?.images?.length}`}
+                  style={{ cursor: "pointer" }}
+                >
+                  {currentPost?.images?.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt="post content"
+                      className={`postContentImg postContentImg${index}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setSlideNumber(index);
+                        setOpenMedia(true);
+                      }}
+                    />
+                  ))}
+                </div>
+                {currentPost?.video && (
+                  <video
+                    src={currentPost.video}
+                    controls
+                    ref={videoRef}
+                    muted
+                    className="postContentVideo"
+                  />
+                )}
+              </>
             )}
             <p className="postTopPosted" style={{ margin: "15px 0" }}>
               {moment(currentPost?.createdAt).format("LLL")}
