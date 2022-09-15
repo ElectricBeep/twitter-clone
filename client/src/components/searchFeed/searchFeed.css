@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+.rightbarSearchContainer {
+  width: 100%;
+}
+
 .searchFeedIcon {
   font-size: 20px;
   cursor: pointer;
@@ -46,4 +50,28 @@
   color: white;
   font-size: 22px;
   font-weight: bold;
+}
+
+.searchFeedNavigationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.searchFeedNavigationItem {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(100, 100, 100);
+  border-bottom: 3px solid transparent;
+}
+
+.searchFeedNavigationItem:hover {
+  background-color: #efefef;
+}
+
+.searchFeedNavigationItem.active {
+  color: black;
+  border-bottom: 3px solid #1da1f2;
 }

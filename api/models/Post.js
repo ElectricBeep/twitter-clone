@@ -34,6 +34,9 @@ const PostSchema = new mongoose.Schema({
   sharesCount: {
     type: Number,
     default: 0
+  },
+  userUsername: {
+    type: String
   }
 }, { timestamps: true });
 

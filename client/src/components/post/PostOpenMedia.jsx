@@ -50,7 +50,7 @@ const PostOpenMedia = ({ openMedia, setOpenMedia, images, slideNumber, setSlideN
             onClick={() => handleMove("left")}
           />
         )}
-        <div className="postOpenMediaWrapper">
+        <div className="postOpenMediaContentWrapper">
           {type === "single" ? (
             <img
               src={images}
@@ -75,6 +75,17 @@ const PostOpenMedia = ({ openMedia, setOpenMedia, images, slideNumber, setSlideN
           onClick={() => setOpenMedia(!openMedia)}
           className="postOpenMediaCloseButton"
         />
+        {isCommentSectionOpen ? (
+          <TbArrowsRight
+            className="postOpenMediaCommentsIconRight"
+            onClick={() => setIsCommentSectionOpen((prev) => !prev)}
+          />
+        ) : (
+          <TbArrowsLeft
+            className="postOpenMediaCommentsIconLeft"
+            onClick={() => setIsCommentSectionOpen((prev) => !prev)}
+          />
+        )}
       </div>
       {isCommentSectionOpen && (
         <div className="postOpenMediaComments">
@@ -100,17 +111,6 @@ const PostOpenMedia = ({ openMedia, setOpenMedia, images, slideNumber, setSlideN
             />
           </div>
         </div>
-      )}
-      {isCommentSectionOpen ? (
-        <TbArrowsRight
-          className="postOpenMediaCommentsIconRight"
-          onClick={() => setIsCommentSectionOpen((prev) => !prev)}
-        />
-      ) : (
-        <TbArrowsLeft
-          className="postOpenMediaCommentsIconLeft"
-          onClick={() => setIsCommentSectionOpen((prev) => !prev)}
-        />
       )}
     </div>
   )

@@ -130,6 +130,7 @@ const Share = ({ type, setPosts }) => {
 
         const newPost = {
           userId: currentUser._id,
+          userUsername: currentUser.username,
           desc: postInputText,
           video: url,
         };
@@ -158,6 +159,7 @@ const Share = ({ type, setPosts }) => {
         );
         const newPost = {
           userId: currentUser._id,
+          userUsername: currentUser.username,
           desc: postInputText,
           images: imagesList,
         };
@@ -171,6 +173,7 @@ const Share = ({ type, setPosts }) => {
       try {
         const newPost = {
           userId: currentUser._id,
+          userUsername: currentUser.username,
           desc: postInputText
         };
         const res = await axios.post(`${BASE_URL}/posts`, newPost);

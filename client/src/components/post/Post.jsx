@@ -341,12 +341,12 @@ const Post = ({ post, setPosts }) => {
         openMedia && (
           <PostOpenMedia
             post={post}
+            postCreator={user}
             openMedia={openMedia}
             setOpenMedia={setOpenMedia}
             images={post?.images}
             slideNumber={slideNumber}
             setSlideNumber={setSlideNumber}
-            postCreator={user}
           />
         )
       }

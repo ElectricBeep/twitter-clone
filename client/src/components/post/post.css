@@ -416,13 +416,22 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.postOpenMediaContainer {
-  display: flex;
+.postOpenMediaLeft {
+  position: relative;
+  width: 100%;
 }
 
-.postOpenMediaWrapper {
-  position: relative;
+.postOpenMediaContentWrapper {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 65px;
+}
+
+.postOpenMediaImage {
+  max-height: 100vh;
+  max-width: 100%;
 }
 
 .postOpenMediaCloseButton {
@@ -475,12 +484,6 @@
   cursor: pointer;
 }
 
-.postOpenMediaImage {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 .postOpenMediaComments {
   background-color: white;
   width: 30%;
@@ -508,7 +511,7 @@
 .postOpenMediaCommentsIconRight {
   position: absolute;
   top: 15px;
-  right: 33%;
+  right: 15px;
   font-size: 25px;
   padding: 8px;
   background-color: rgba(0, 0, 0, 0.4);

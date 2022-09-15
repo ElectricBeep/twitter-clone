@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { FiSettings, FiSearch } from "react-icons/fi";
+import { FiSettings } from "react-icons/fi";
 
 import Post from "../post/Post";
 import "./exploreFeed.css";
 import { BASE_URL } from "../../baseUrl";
+import SearchInput from "../searchInput/SearchInput";
 
 const ExploreFeed = () => {
   const [posts, setPosts] = useState([]);
@@ -30,14 +31,7 @@ const ExploreFeed = () => {
         className="searchFeedWrapper"
         style={{ position: "sticky", top: "0", zIndex: "99999", backgroundColor: "rgba(255, 255, 255, 0.95)" }}
       >
-        <div className="rightbarSearchContainer" style={{ width: "90%" }}>
-          <FiSearch fontSize={25} style={{ cursor: "pointer" }} />
-          <input
-            type="text"
-            placeholder="Search Twitter"
-            className="rightbarInput"
-          />
-        </div>
+        <SearchInput />
         <div className="searchFeedIconContainer">
           <FiSettings className="searchFeedIcon" />
         </div>

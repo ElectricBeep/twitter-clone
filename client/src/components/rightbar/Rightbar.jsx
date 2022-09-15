@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { FiSearch } from "react-icons/fi";
 import { FiMoreHorizontal } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import axios from "axios";
@@ -8,6 +7,7 @@ import axios from "axios";
 import "./rightbar.css";
 import { BASE_URL } from "../../baseUrl";
 import RightbarUser from "./RightbarUser";
+import SearchInput from "../searchInput/SearchInput";
 
 const Rightbar = ({ page }) => {
   const [users, setUsers] = useState([]);
@@ -33,14 +33,7 @@ const Rightbar = ({ page }) => {
       <div className="rightbarWrapper">
         {page !== "search" && (
           <>
-            <div className="rightbarSearchContainer">
-              <FiSearch fontSize={25} />
-              <input
-                type="text"
-                placeholder="Search Twitter"
-                className="rightbarInput"
-              />
-            </div>
+            <SearchInput />
             <div className="rightbarTrends">
               <h1 className="rightbarTrendsTitle">Trends for you</h1>
               <div className="rightbarTrendsItems">

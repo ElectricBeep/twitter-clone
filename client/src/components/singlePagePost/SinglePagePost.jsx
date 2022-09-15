@@ -263,6 +263,8 @@ const SinglePagePost = ({ currentPost, currentUser, postCreator, type }) => {
       {
         openMedia && (
           <PostOpenMedia
+            post={currentPost}
+            postCreator={postCreator}
             openMedia={openMedia}
             setOpenMedia={setOpenMedia}
             images={currentPost?.images}

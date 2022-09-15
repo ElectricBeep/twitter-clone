@@ -1,0 +1,93 @@
+.searchInputContainer {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background-color: #e1e8ed;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.searchInputContainer.active {
+  background-color: white;
+  border: 1px solid #1da1f2;
+}
+
+.searchInputInput {
+  padding: 10px;
+  border-radius: 50px;
+  width: 80%;
+  border: none;
+  background-color: transparent;
+}
+
+.searchInputInput:focus {
+  outline: none;
+}
+
+.searchInputDropdownContainer {
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  min-height: 100px;
+  max-height: fit-content;
+  bottom: -102px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.74);
+  font-size: 15px;
+  overflow: hidden;
+}
+
+.searchInputDropdownItem {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.searchInputDropdownItem:hover {
+  background-color: #efefef;
+}
+
+.searchInputDropdownItemLeft {
+}
+
+.searchInputDropdownItemImg {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.searchInputDropdownItemImg:hover {
+  filter: brightness(0.8);
+}
+
+.searchInputDropdownItemRight {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.searchInputDropdownItemName:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.searchInputDropdownItemUsername,
+.searchInputDropdownItemAbout {
+  color: rgb(100, 100, 100);
+  font-size: 15px;
+}
+
+.searchInputDropdownText {
+  color: rgb(100, 100, 100);
+  text-align: center;
+  margin-top: 2rem;
+}
